@@ -1,0 +1,51 @@
+name: attachment
+description: "A couples companion app project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management & Routing
+  flutter_riverpod: ^2.4.9
+  go_router: ^12.1.1
+
+  # Firebase Infrastructure
+  firebase_core: ^2.27.0
+  firebase_auth: ^4.19.0
+  cloud_firestore: ^4.15.0
+  google_sign_in: 6.1.5
+
+  # UI & Styling
+  google_fonts: ^6.1.0
+  flutter_svg: ^2.0.9
+
+  # Network State (Crucial for our strict online requirement)
+  connectivity_plus: ^5.0.2
+
+  # Country Picker for Phone Auth
+  country_picker: ^2.0.20
+
+# THE HARDWARE CLAMP: Forces the compiler to use the older iOS SDK
+dependency_overrides:
+  google_sign_in_ios: 5.6.2
+
+# Add any dev_dependencies here if needed later
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  # This tells the compiler to bundle the Material Icons font into your app
+  uses-material-design: true
+
+  # Asset pipeline for Figma exports
+  assets:
+    - assets/images/
+    - assets/icons/
